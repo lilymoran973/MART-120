@@ -1,4 +1,7 @@
 .highlight{color:azure; font-weight: bold;}
 .favorite{background-color:darkslategrey;padding: 10px;}
 #main-title{font-size: 36px;}
-#story-title{text-align: center;}
+#story-title{text-align: left;
+background-color:darkslategrey;
+color: azure;
+padding: 10px}
