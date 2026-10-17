@@ -6,26 +6,56 @@
     </head>
     <body>
         <h1>Contact Us</h1>
-        <form>
+        <form onsubmit="checkForm(event)" novalidate>
             <p>
                 Name:
-                <input type="text" name="name" class="form-control">
+                <input type="text" name="name" id="name" class="form-control" required>
             </p>
             <p>
                 Email:
-                <input type="email" name="email" class="form-control">
+                <input type="email" name="email" id="email" class="form-control" required>
             </p>
             <p>
                 Do you accept the terms of aggreement?
                 <input type="radio" name="terms" value="yes"> Yes
                 <input type="radio" name="terms" value="no"> No
+                <span id="termMessage"></span>
             </p>
-            
+            <button type="submit" class="btn btn-primary"> submit</button>
         </form>
         <h2>Pages</h2>
         <ul>
             <li><a href="Homepage.html">Home</a></li>
             <li><a href="story.html">My Favorite Story</a></li>
         </ul>
+        <script>
+            function checkForm(event) {
+                event.preventDefault();
+                let name= document.getElementById("name");
+                let email= document.getElementById("email");
+
+                name.style.backgroundColor="white";
+                email.style.backgroundColor="white";
+                    if (name.value.trim() === "") {
+                   name.style.backgroundColor= "lightcoral";
+                   name.focus();
+                   return;
+            }
+            if (email.value.trim()=== "") {
+            email.style.backgroundColor = "lightcoral";
+            email.focus();
+            return;
+            }
+            let term = document.querySelector('input[name="terms"]:checked');
+            let message = document.getElementById("termsMessage"); 
+
+            if (!term || terms.value === "no") {
+                message.textContent = "You must accept the terms of agreement.";
+                message.style.color= "red";
+                return;
+            }
+            messgae.textContent= "";
+            }
+        </script>
     </body>
 </html>
