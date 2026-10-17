@@ -19,7 +19,7 @@
                 Do you accept the terms of aggreement?
                 <input type="radio" name="terms" value="yes"> Yes
                 <input type="radio" name="terms" value="no"> No
-                <span id="termMessage"></span>
+                <span id="termsMessage"></span>
             </p>
             <button type="submit" class="btn btn-primary"> submit</button>
         </form>
@@ -48,8 +48,8 @@
             }
             let term = document.querySelector('input[name="terms"]:checked');
             let message = document.getElementById("termsMessage"); 
-
-            if (!term || terms.value === "no") {
+            message.textContent = "";
+            if (!term || term.value === "no") {
                 message.textContent = "You must accept the terms of agreement.";
                 message.style.color= "red";
                 return;
