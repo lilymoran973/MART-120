@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>My Self Portait</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js" ></script>
+        <script>
+            function setup() {
+                createCavas(500, 600);
+            }
+            function draw() {
+                background(255, 225, 235);
+                
+                // Portrait Title
+                noStrock();
+                fill(100,50,80);
+                TextSize(28);
+                text("My Self Portait", 145, 45);
+
+                // Long black hair 
+                fill(25, 20, 25);
+                ellipse(250, 320, 230, 400);
+
+                // Neck
+                fill(255,220,195);
+                rect(225,350,50,70);
+
+                // Purple shirt
+                fill(185, 155,215);
+                rect(140,410,220,140);
+
+                // Face
+                fill(255,220,195);
+                ellipse(250,270,165,210);
+
+                // Hair on top
+                fill(25,20,25);
+                arc(250,205,175,130,PI, TWO_PI);
+
+                // Long hair on sides
+                ellipse(165,345,45,280);
+                ellipse(335,345,45,280);
+
+                // White part of the eyes
+                fill(255);
+                ellipse(215,265,32,22);
+                ellipse(285,265,32,22);
+
+                // Brown eyes
+                fill(110,65,35);
+                circle(215,265,17);
+                circle(285,265,17);
+
+                // Pupils
+                fill(20);
+                circle(215,265,8);
+                circle(285,265,8);
+
+                // Eyebrowns
+                stroke(30,20,20);
+                strokeWeight(3);
+                line(195,240,230,240);
+                line(270,240,305,240);
+
+                // Nose using a point
+                stroke(180,130,110);
+                strokeWeight(5);
+                point(250,295);
+
+                // Smile
+                nofill();
+                stroke(190,130,105);
+                strokeWeight(3);
+                arc(250,320,45,25,0,PI);
+
+                //shirt collar using triangles
+                noStroke();
+                fill(255);
+                triangle(220,410,250,440,250,410);
+                triangle(250,410,250,440,280,410);
+
+                // circles
+                fill(255);
+                circle(70,110,25);
+                circle(430,125,35);
+
+                // Signature
+                fill(100,50,80);
+                textSize(20);
+                text("Lily",255,580);
+                }
+        </script>
+    </head>
+</html>
