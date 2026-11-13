@@ -16,7 +16,7 @@ function setup() {
     obstacleXSpeed = random(-3,3);
     obstacleYSpeed = random(-3,3);
     obstacle2XSpeed = random(-3,3);
-    obstacle2Yspeed = random(-3,3);
+    obstacle2YSpeed = random(-3,3);
 }
 
 function draw() {
@@ -35,12 +35,12 @@ function draw() {
 // Create The Player
 function createPlayer() {
     fill(150,80,200);
-    circle(playerX,PLayerY,30);
+    circle(playerX,playerY,30);
 }
 
 //Move the Player using WASD
 function movePlayer() {
-    if(keyIsDown(87)) {
+    if (keyIsDown(87)) {
         playerY-= 5;
     }
     else if (keyIsDown(83)) {
@@ -116,7 +116,7 @@ function drawMouseShape() {
         stroke(100,50,150);
         strokeWeight(5);
         rect(0,0,width,height);
-        noStorke();
+        noStroke();
     }
     //create the exit
     function createExit() {
